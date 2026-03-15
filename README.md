@@ -1,16 +1,33 @@
 # Fitbod2HevyConverter
 
-This Jupyter notebook provides a convenient solution for converting workout data from Fitbod to Hevy format. The script is equipped to handle CSV files from Fitbod, transforming them into a format compatible with the Hevy workout tracking app. Key features include:
+Converts Fitbod workout CSV exports into the Strong CSV format that Hevy accepts for import.
 
-Installation of necessary libraries (```transformers, sentencepiece, pandas, numpy```).
-Importing and processing Fitbod CSV files.
-Utilizing a zero-shot classification model for categorizing workout types.
-Converting exercise names, weights, and other data to match Hevy's format.
-Outputting the transformed data into a Hevy-compatible CSV file.
+## Usage
 
-This tool is ideal for those looking to migrate their workout data from Fitbod to Hevy without losing any information or context in the process.
+```bash
+python converter.py <fitbod_export.csv> [output.csv]
+```
 
+**Example:**
+```bash
+python converter.py WorkoutExport_march2026.csv converted_for_hevy.csv
+```
 
-##### Note to self
+If no output filename is provided, the result is saved to `FitBodToHevyConvertedFile.csv`.
 
-- The export file is still not being accepted by the Hevy app
+## How It Works
+
+1. Reads a Fitbod CSV export (columns: Date, Exercise, Reps, Weight(kg), Duration(s), etc.)
+2. Maps Fitbod exercise names to Hevy-compatible names (219 exercises mapped)
+3. Outputs a semicolon-separated Strong CSV format that Hevy's import feature accepts
+
+## Hevy Import
+
+1. Run the converter to generate the output CSV
+2. In Hevy, go to **Settings > Import Data**
+3. Select the generated CSV file
+4. Hevy will parse and import all workouts
+
+## No Dependencies
+
+Uses only the Python standard library (csv, sys, io). No pip install needed.

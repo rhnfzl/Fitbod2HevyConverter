@@ -1,4 +1,1 @@
-pandas
-numpy
-transformers
-sentencepiece
+# No external dependencies required - uses Python standard library only
