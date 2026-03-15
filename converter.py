@@ -17,7 +17,7 @@ EXERCISE_MAPPING = {
     'Air Squats': 'Squat (Bodyweight)',                                   # hevy-gpt 9694DA61
     'Arnold Dumbbell Press': 'Arnold Press (Dumbbell)',                   # hevy-gpt A69FF221
     'Assisted Chin Up': 'Chin Up (Assisted)',
-    'Assisted Dip': 'Dip (Assisted)',
+    'Assisted Dip': 'Triceps Dip',                                       # hevy-gpt 28BB4A95
     'Assisted Neutral Grip Pull Up': 'Pull Up (Assisted)',
     'Assisted Pull Up': 'Pull Up (Assisted)',
     'Assisted Wide Grip Pull Up': 'Pull Up (Assisted)',
@@ -49,7 +49,7 @@ EXERCISE_MAPPING = {
     'Cable One Arm Tricep Side Extension': 'Triceps Extension (Cable)',   # hevy-gpt 21310F5F
     'Cable One Arm Underhand Tricep Extension': 'Triceps Extension (Cable)',  # hevy-gpt 21310F5F
     'Cable Rear Delt Fly': 'Reverse Fly (Cable)',
-    'Cable Rope Overhead Triceps Extension': 'Overhead Triceps Extension - Rope (Cable)',
+    'Cable Rope Overhead Triceps Extension': 'Triceps Rope Pushdown',     # hevy-gpt 94B7239B
     'Cable Rope Tricep Extension': 'Triceps Rope Pushdown',              # hevy-gpt 94B7239B
     'Cable Row': 'Seated Row (Cable)',
     'Cable Tricep Pushdown': 'Triceps Pushdown',                         # hevy-gpt 93A552C6
@@ -97,10 +97,10 @@ EXERCISE_MAPPING = {
     'Dumbbell Superman': 'Superman',                                      # website confirmed
     'Dumbbell Tricep Extension': 'Triceps Extension (Dumbbell)',          # hevy-gpt 3765684D
     'Dumbbell Upright Row': 'Upright Row (Dumbbell)',
-    'Dumbbell Walking Lunge': 'Walking Lunge (Dumbbell)',
+    'Dumbbell Walking Lunge': 'Lunge (Dumbbell)',                          # hevy-gpt B537D09F
     'EZ-Bar Curl': 'Bicep Curl (EZ Bar)',
-    'EZ-Bar Overhead Tricep Extension': 'Overhead Triceps Extension (EZ Bar)',
-    'EZ-Bar Reverse Grip Curl': 'Reverse Curl (EZ Bar)',
+    'EZ-Bar Overhead Tricep Extension': 'Triceps Extension (Barbell)',      # website confirmed
+    'EZ-Bar Reverse Grip Curl': 'Reverse Curl',                            # website confirmed
     'Elliptical': 'Elliptical Trainer',                                   # hevy-gpt 3303376C
     'Face Down Plate Neck Resistance': 'Neck Extension',
     "Farmer's Walk": "Farmer's Walk",                                     # website confirmed
@@ -152,14 +152,14 @@ EXERCISE_MAPPING = {
     'Machine Reverse Fly': 'Reverse Fly (Machine)',
     'Machine Row': 'Seated Row (Machine)',                                # hevy-gpt 1DF4A847
     'Machine Shoulder Press': 'Seated Shoulder Press (Machine)',          # hevy-gpt 9237BAD1
-    'Machine Tricep Dip': 'Triceps Dip (Machine)',
+    'Machine Tricep Dip': 'Triceps Dip',                                   # hevy-gpt 28BB4A95
     'Machine Tricep Extension': 'Triceps Extension (Machine)',
     'Medicine Ball Russian Twist': 'Russian Twist',
     'Palms-Down Dumbbell Wrist Curl': 'Wrist Curl (Dumbbell)',
     'Palms-Up Dumbbell Wrist Curl': 'Wrist Curl (Dumbbell)',
     'Pendlay Row': 'Pendlay Row (Barbell)',                               # hevy-gpt 018ADC12
     'Plank': 'Plank',                                                     # hevy-gpt C6C9B8A0
-    'Plank Shoulder Taps': 'Plank Shoulder Taps',
+    'Plank Shoulder Taps': 'Plank',                                        # hevy-gpt C6C9B8A0
     'Preacher Curl': 'Preacher Curl (EZ Bar)',
     'Pull Up': 'Pull Up',                                                 # hevy-gpt 1B2B1E7C
     'Push Press': 'Push Press',                                           # website confirmed
@@ -173,7 +173,7 @@ EXERCISE_MAPPING = {
     'Running': 'Running',
     'Running - Treadmill': 'Treadmill',                                   # hevy-gpt 243710DE
     'Russian Twist': 'Russian Twist',
-    'Scapular Pull Up': 'Scapular Pull Up',
+    'Scapular Pull Up': 'Scapular Pull-ups',                               # website confirmed
     'Scissor Crossover Kick': 'Scissor Kicks',
     'Scissor Kick': 'Scissor Kicks',
     'Seated Back Extension': 'Back Extension (Machine)',                  # hevy-gpt A05C064D
@@ -215,7 +215,7 @@ EXERCISE_MAPPING = {
     'Tricep Push Up': 'Diamond Push Up',                                  # website confirmed
     'Tricep Stretch': 'Tricep Stretch',
     'Upright Row': 'Upright Row (Barbell)',                               # website confirmed
-    'V-Bar Pulldown': 'Lat Pulldown - V Bar (Cable)',
+    'V-Bar Pulldown': 'Lat Pulldown (Cable)',                               # hevy-gpt 6A6C31A5
     'Vertical Knee Raise': 'Vertical Knee Raise',
     'Walking': 'Walking',
     'Walkout to Push Up': 'Walkout to Push Up',
@@ -365,7 +365,7 @@ HEVY_EXERCISES = [
     'T Bar Row',
     'Treadmill',
     'Triceps Dip',
-    'Triceps Dip (Machine)',
+    'Triceps Extension (Barbell)',
     'Triceps Dip (Weighted)',
     'Triceps Extension (Barbell)',
     'Triceps Extension (Cable)',
@@ -376,6 +376,10 @@ HEVY_EXERCISES = [
     'Triceps Rope Pushdown',
     'Upright Row (Barbell)',
     'Zottman Curl (Dumbbell)',
+    # Additional confirmed names
+    'Reverse Curl',
+    'Scapular Pull-ups',
+    'V Up',
     # From website (additional confirmed exercises)
     'Around The World',
     'Back Extension',
